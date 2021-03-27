@@ -10,7 +10,7 @@ class CreateVehicleComponent extends Component {
         this.state = {
             // step 2
             id: this.props.match.params.id,
-            vehicleregno: '',
+            vehicleregno: '5',
             chassisno: '',
             engineno: '',
             vehicleregcertificateno: '',

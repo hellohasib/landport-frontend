@@ -43,6 +43,7 @@ const dashboardRoutes = [
     component: Dashboard,
     layout: "/admin",
   },
+
  {
            path: "/add-pilot/_add",
            name: "Add Pilot",

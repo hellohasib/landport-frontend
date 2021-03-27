@@ -50,7 +50,7 @@ class ListImporterComponent extends Component {
     }
      // get data
       getData = (page, rowsPerPage) => {
-        fetch(`http://localhost:8080/api/v1/importers`)
+        fetch(`http://45.79.126.105/tamabil/api/v1/importers`)
           .then(response => {
             if (response.status >= 400) {
               throw new Error('Bad response from server');
