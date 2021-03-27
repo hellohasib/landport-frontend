@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const EMPLOYEE_API_BASE_URL = "http://localhost:8080/api/v1/weights";
+const EMPLOYEE_API_BASE_URL = "http://45.79.126.105:8080/tamabil/api/v1/weights";
 
 class WeightService {
 

@@ -36,14 +36,6 @@ import Login from "views/Login.jsx";
 
 
 const dashboardRoutes = [
-//  {
-//    upgrade: true,
-//    path: "/upgrade",
-//    name: "Logout",
-//    icon: "nc-icon nc-button-power",
-//    component: Upgrade,
-//    layout: "/admin",
-//  },
   {
     path: "/dashboard",
     name: "Dashboard",
@@ -66,7 +58,7 @@ const dashboardRoutes = [
              layout: "/admin",
            },
     {
-               path: "/add-vehicle/_add",
+              path: "/add-vehicle/_add",
                name: "Add Vehicle",
                icon: "nc-icon nc-ambulance",
                component: CreateVehicle,
