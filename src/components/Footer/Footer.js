@@ -25,11 +25,11 @@ class Footer extends Component {
         <Container fluid>
           <nav>
 
-            <p className="copyright text-center">
-              © {new Date().getFullYear()}{" "}
-              <a href="http://localhost:3001">Sigmaind.ai</a>, made with
-              love for a better web
-            </p>
+//            <p className="copyright text-center">
+//              © {new Date().getFullYear()}{" "}
+//              <a href="http://localhost:3001">Sigmaind.ai</a>, made with
+//              love for a better web
+//            </p>
           </nav>
         </Container>
       </footer>

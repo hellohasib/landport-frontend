@@ -108,6 +108,7 @@ const dashboardRoutes = [
        component: CreateCargo,
        layout: "/admin",
      },
+
      {
          path: "/cargo",
          name: "All Cargo",

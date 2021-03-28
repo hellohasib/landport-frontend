@@ -49,7 +49,7 @@ class ListWeightComponent extends Component {
     }
      // get data
       getData = (page, rowsPerPage) => {
-        fetch(`http://45.79.126.105/tamabil/api/v1/weights`)
+        fetch(`http://45.79.126.105:8080/tamabil/api/v1/weights`)
           .then(response => {
             if (response.status >= 400) {
               throw new Error('Bad response from server');

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import CargoService from '../services/CargoService'
 import MUIDataTable from 'mui-datatables';
 import fetch from 'isomorphic-fetch';
+import { useHistory } from "react-router-dom";
 
 
 class ListCargoComponent extends Component {
@@ -46,11 +47,14 @@ class ListCargoComponent extends Component {
     }
 
     addCargo(){
+
         this.props.history.push('/add-cargo/_add');
+
+
     }
      // get data
       getData = (page, rowsPerPage) => {
-        fetch(`http://45.79.126.105/tamabil/api/v1/cargos`)
+        fetch(`http://45.79.126.105:8080/tamabil/api/v1/cargos`)
           .then(response => {
             if (response.status >= 400) {
               throw new Error('Bad response from server');
@@ -87,6 +91,22 @@ class ListCargoComponent extends Component {
           'Number of Package',
           'Importer Id',
           'Cnf Id',
+          {
+                  name: "Edit",
+                  options: {
+                    filter: false,
+                    sort: false,
+                    empty: true,
+                    customBodyRenderLite: (id) => {
+                      return (
+                        <button onClick={() => editCargo(1)}>
+                          Edit
+                        </button>
+                      );
+                    }
+                  }
+                },
+
         ];
         const { data, page, count } = this.state;
 
@@ -110,18 +130,30 @@ class ListCargoComponent extends Component {
                 break;
             }
           },
+
+
+
         };
+
         return (
+
+
             <div>
                  <h2 className="text-center">Cargos List</h2>
+<div className = "row">
+                    <button  className="btn btn-primary" onClick={this.addCargo}> Add Cargo</button>
+                 </div>
 
                  <br></br>
 
                        <MUIDataTable
+
+
                                title={'Cargo list'}
                                data={data}
                                columns={columns}
                                options={options}
+
                              />
             </div>
         )
