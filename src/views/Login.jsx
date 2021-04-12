@@ -6,6 +6,8 @@ import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import Button from "react-bootstrap/Button";
 import logo from "assets/img/blpa.jpg";
 import tamabil from "assets/img/tamabil.jpg";
+import ict from "assets/img/ict.png";
+import Box from '@material-ui/core/Box';
 class Login extends Component {
     constructor(props) {
         super(props)
@@ -129,6 +131,30 @@ document.title = "Bangladesh Landport Authority"
                     </div>
 
                 </div>
+                <div style={{ width: '100%' }}>
+
+                <center>
+                                      <Box display="center" flexDirection="row" >
+
+                                        <Box >
+                                          পরিকল্পনা ও বাস্তবায়নে: বাংলাদেশ স্থল বন্দর কর্তৃপক্ষ <img src={logo} alt="logo" style={{width:"50px", height:"50px", margin:"10px"}} />
+                                        </Box>
+                                        <Box >
+                                          অর্থায়নে <img src={ict} alt="logo" style={{width:"50px", height:"50px", margin:"10px"}} />
+                                        </Box>
+
+
+                                      </Box>
+                                      </center>
+                                      <Box display="flex" flexDirection="row" >
+                                                              <Box>
+                                                                কারিগরি সহযোগিতায় <strong>Unit X</strong>
+                                                              </Box>
+
+                                                            </Box>
+
+
+                                    </div>
             </div>
         )
     }
